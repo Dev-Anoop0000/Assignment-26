@@ -1,0 +1,36 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #20bf55;
+    background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+}
+
+h1 {
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 500px;
+    padding: 10px;
+    border: 2px solid #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly;
+    background-color: #ffffff;
+    margin-top: 4rem;
+}
+
+p {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+footer {
+    margin: 3rem 0rem;
+    letter-spacing: 1px;
+}

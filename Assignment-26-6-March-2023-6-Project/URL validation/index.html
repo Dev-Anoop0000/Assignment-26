@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Validation</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #a4508b;
+            background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+        }
+        
+        .container {
+            width: 400px;
+            height: 420px;
+            background-color: #ffffff;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        
+        label {
+            font-size: 20px;
+        }
+        
+        input {
+            padding: 5px;
+            font-size: 18px;
+        }
+        
+        button {
+            width: 100px;
+            background-color: blueviolet;
+            color: #ffffff;
+            padding: 5px 10px;
+            border: 0;
+            outline: none;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        
+        #result {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>URL Validation</h1>
+
+        <div class="input-div">
+            <label for="url">Enter a URL:</label>
+            <input type="text" id="url" placeholder="Enter a URL" />
+        </div>
+        <button onclick="validateURL()">Check</button>
+
+        <div id="result"></div>
+
+    </div>
+
+    <script>
+        function validateURL() {
+            const urlInput = document.getElementById('url').value;
+            const regex = /^(http:\/\/|https:\/\/)[\w\d\s\S]+?\.[\w]+$/;
+            const isValidURL = regex.test(urlInput);
+
+            const resultDiv = document.getElementById('result');
+            if (isValidURL) {
+                resultDiv.textContent = "Valid URL.";
+                resultDiv.style.color = "green";
+            } else {
+                resultDiv.textContent = "Invalid URL.";
+                resultDiv.style.color = "red";
+            }
+        }
+    </script>
+</body>
+
+</html>
